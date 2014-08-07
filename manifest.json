@@ -5,7 +5,7 @@
   "description": "Allows you to choose the time after which comments on a thread on Less Wrong are highlighted.",
   "content_scripts": [
     {
-      "matches": ["http://lesswrong.com/lw/*", "http://lesswrong.com/r/*"],
+      "matches": ["http://lesswrong.com/lw/*", "http://lesswrong.com/r/*/lw/*"],
       "js": ["lw.user.js"]
     }
   ],

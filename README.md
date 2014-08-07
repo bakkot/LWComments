@@ -13,7 +13,7 @@ Tested only on recent versions of Firefox and Chrome.
 
 Firefox users: Install Greasemonkey and open SSComments/ssc.user.js in Firefox.
 
-Chrome users: [Install the extension](https://chrome.google.com/webstore/detail/slatestarcomments/aobpboihcjnlhbnjckjaeafncnpaageh)! Or do it the hard way: save lw.user.js to disk, go to `chrome://extensions`, and drag the script onto the main body of the window.
+Chrome users: [Install the extension](https://chrome.google.com/webstore/detail/less-wrong-comment-highli/ncicfpeiadllklmilbjpengagphcpgbp)! Or do it the hard way: save lw.user.js to disk, go to `chrome://extensions`, and drag the script onto the main body of the window.
 
 
 Usage Tips

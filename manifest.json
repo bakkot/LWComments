@@ -1,7 +1,7 @@
 {
   "name": "Less Wrong Comment Highlight",
   "short_name": "LWComments",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Allows you to choose the time after which comments on a thread on Less Wrong are highlighted.",
   "content_scripts": [
     {

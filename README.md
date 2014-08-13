@@ -11,7 +11,7 @@ Installation
 
 Tested only on recent versions of Firefox and Chrome.
 
-Firefox users: Install Greasemonkey and open lw.user.js in Firefox.
+Firefox users: Install Greasemonkey and open lw.user.js in Firefox. (The 'raw' version, ie, [this link](https://github.com/bakkot/LWComments/raw/master/lw.user.js).)
 
 Chrome users: [Install the extension](https://chrome.google.com/webstore/detail/less-wrong-comment-highli/ncicfpeiadllklmilbjpengagphcpgbp)! Or do it the hard way: save lw.user.js to disk, go to `chrome://extensions`, and drag the script onto the main body of the window.
 

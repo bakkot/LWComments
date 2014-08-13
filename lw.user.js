@@ -140,7 +140,7 @@ document.body.appendChild(floatBox);
 // *** Extract post time from a comment element
 
 function getTime(ele) {
-  return parseInt(ele.querySelector('.comment-date').getAttribute('time'))*1000; // seconds->ms
+  return parseInt(ele.childNodes[3].querySelector('.comment-date').getAttribute('time'))*1000; // seconds->ms
 }
 
 

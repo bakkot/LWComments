@@ -4,7 +4,7 @@
 // @description    Allows you to choose the time after which comments on a thread on Less Wrong are highlighted 
 // @match          http://lesswrong.com/lw/*
 // @match          http://lesswrong.com/r/*/lw/*
-// @version        1.0
+// @version        1.1
 // ==/UserScript==
 
 

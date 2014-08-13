@@ -147,6 +147,11 @@ function getTime(ele) {
 // *** Find the latest comment without a highlight
 
 function findLastUnreadTime() {
+  var lvEle = document.getElementById("lastViewed");
+  if(lvEle) {
+    return parseInt(lvEle.getAttribute("time"))*1000;
+  }
+
   var mostRecent = 0;
   var commentList = document.querySelectorAll('div.comment:not(.new-comment)');
   console.log(commentList);
@@ -219,9 +224,4 @@ function setup() {
   border(mostRecentUnread, true); // for list population and title setting 
 }
 
-if(navigator.userAgent.toLowerCase().indexOf('firefox') != -1) { // ugh...
-  addEventListener("load", setup, false);
-}
-else {
-  setup();
-}
+setup();

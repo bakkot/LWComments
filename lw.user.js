@@ -154,7 +154,6 @@ function findLastUnreadTime() {
 
   var mostRecent = 0;
   var commentList = document.querySelectorAll('div.comment:not(.new-comment)');
-  console.log(commentList);
   for(var i = 0; i < commentList.length; ++i) {
     var time = getTime(commentList[i]);
     if(time > mostRecent) { // handily also deals with NaN case
@@ -169,9 +168,7 @@ function findLastUnreadTime() {
 
 function border(since, updateTitle) {
   lastGivenDate = since;
-  console.log(since);
   var commentList = document.querySelectorAll('div.comment');
-  console.log(commentList);
   var newComments = [];
   
   // Walk comments, setting borders as appropriate and saving new comments in a list
@@ -187,7 +184,6 @@ function border(since, updateTitle) {
     }
   }
   var newCount = newComments.length;
-  console.log(newCount);
   
   // Maybe add new comment count to title
   if (updateTitle) {

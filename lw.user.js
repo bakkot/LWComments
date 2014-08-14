@@ -44,6 +44,7 @@ styleEle.innerHTML = '.comments-floater { position: fixed; right: 4px; top: 4px;
 '.comments-date { font-size: 11px; }' +
 '.comments-list { margin-left: 23px; }' +
 '.semantic-cell { display: table-cell; }' +
+'.hidden-comment-ref { opacity: 0.5; }' +
 '.cct-span { white-space: nowrap; }' +
 '.date-input { width: 100%; box-sizing: border-box; }' +
 '.input-span { width: 100%; padding-left: 5px; }' +
@@ -199,7 +200,11 @@ function border(since, updateTitle) {
     for(i = 0; i < newCount; ++i) {
       var ele = newComments[i].ele;
       var newLi = document.createElement('li');
-      newLi.innerHTML = ele.querySelector('.author').textContent.replace(/\n/g, '') + ' <span class="comments-date">' + (new Date(newComments[i].time)).toLocaleString() + '</span>';
+      var newHTML = ele.querySelector('.author').textContent.replace(/\n/g, '') + ' <span class="comments-date">' + (new Date(newComments[i].time)).toLocaleString() + '</span>';
+      if(ele.offsetParent === null) { // ie, not currently displayed, due to a parent being below the point threshold
+        newHTML = '<span class="hidden-comment-ref">' + newHTML + '</span>';
+      }
+      newLi.innerHTML = newHTML;
       newLi.addEventListener('click', function(ele){return function(){ele.scrollIntoView(true);};}(ele));
       commentsList.appendChild(newLi);
     }
